@@ -1,0 +1,210 @@
+*, ::before,::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 100px 0 20px;
+  background: linear-gradient(to top , rgb(193, 249, 255), rgb(0, 170, 255));
+}
+
+
+.container-app {
+  max-width: 400px;
+  background: #f1f1f1;
+  color: #333;
+  padding-top: 20px;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,.3);
+  border-radius: 15px;
+  margin: 0 auto;
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(201, 226, 255));
+  position: relative;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  margin: 1rem 0;
+  font-size: 30px;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+.infos-global{
+  display:flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+
+.img-global {
+  width: 150px;
+  transform: scale(1.4);
+}
+
+.temperature {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.ville {
+font-weight: 300;
+font-size: 25px;
+/* word-break = va retourner le mot a la ligne si jamais il n'as pas de place */
+word-break: break-all;
+}
+
+.footer-app {
+  background: #f1f1f1;
+  position: relative;
+  border-top: 1px solid midnightblue;
+}
+
+.content-btns {
+  padding: 2rem 0;
+  display:flex; 
+   justify-content: center; 
+   align-items: center; 
+  
+}
+
+
+
+/* Boutons */
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 1rem;
+  border-radius: 5px;
+  border: none;
+  color: rgb(166, 166, 250);
+  border: 1px solid rgb(166, 166, 250);
+  padding: 0.5rem 2rem;
+  transition: color 0.2s ease-in-out,
+              background 0.2s ease-in-out;
+}
+.btn:hover {
+  color: rgb(33, 33, 156);
+  border: 1px solid midnightblue;
+}
+
+.btn.active {
+  border: none;
+  color: #f1f1f1;
+  background: midnightblue;
+  padding: 0.5rem 2rem;
+  transition: color 0.2s ease-in-out,
+}
+/*  on créer une grille global */
+.content-prev {
+  display: grid;
+}
+
+.box-prev {
+  display: none;
+}
+
+.heure-cont, .jours-cont {
+  grid-area: 1 / 1 / 2 / 2;
+  /* on créer une autre grille dans la grille */
+  grid-template-columns: repeat(7,1fr);
+}
+
+.heure-cont.active,  .jours-cont.active  {
+  display: grid;
+}
+
+
+.prev-block {
+  display:flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  padding: 15px 0;
+  position: relative;
+  background: midnightblue;
+}
+
+.prev-block:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+}
+
+.prev-block p {
+  padding: 0 5px;
+}
+
+.prev-block p:nth-child(2){
+  margin-top: 10px;
+}
+
+.heure-nom, .jour-nom {
+  font-weight: bold;
+  font-size: 18px;
+  color: #f1f1f1;
+}
+.jour-temps, .heure-temps {
+  font-weight: 400;
+  color: rgb(255, 229, 156);
+}
+
+.loader-app {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: #f1f1f17d;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0s 0.8s ease-out, opacity 0.4s 0.4s ease-out;
+}
+
+
+/* nous allons ajouter cette class dynamiquement avec le Javascript */
+.loader-end {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: midnightblue;
+  margin: 0 3px;
+  animation: load 0.3s infinite ease-out alternate;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes load {
+  to {
+    transform: translateY(10px);
+  }
+}
