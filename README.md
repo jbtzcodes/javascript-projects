@@ -1,4 +1,4 @@
-# __HTML de A à Z__
+# __Projets Javascript__
 
 Ce répertoire regroupe les fichiers sources de divers projets Javascript 
 
