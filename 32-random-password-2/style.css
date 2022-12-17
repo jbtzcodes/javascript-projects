@@ -48,6 +48,7 @@ border-radius: 4px;
 outline: none;
 padding: 0 2.5rem 0 1rem;
 background: none;
+letter-spacing: 1.4px;
 }
 
 .inp-groupe span {
@@ -74,6 +75,21 @@ position: relative;
   width: 50%;
   border-radius: inherit;
   background: rgb(255, 213, 0);
+  transition: width 0.2s ease,
+              background 0.2s ease;
+}
+
+.indicator#petit::before {
+  width: 20%;
+  background: rgb(146, 0, 0) ;
+}
+.indicator#moyen::before {
+  width: 50%;
+  background: rgb(255, 200, 0) ;
+}
+.indicator#long::before {
+  width: 100%;
+  background: rgb(50, 214, 0) ;
 }
 
 .mdp-length{
