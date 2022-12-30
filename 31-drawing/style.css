@@ -1,0 +1,21 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(30deg, rgb(219, 255, 182), rgb(7, 125, 64));
+  font-family: Arial, Helvetica, sans-serif;
+  display:flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 0 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+}

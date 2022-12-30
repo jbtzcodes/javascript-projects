@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Drawing</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <section class="tools-board">
+      <div class="row">
+        <label class="title">Shapes</label>
+        <ul class="options">
+          <li class="option">
+            <ion-icon name="tablet-landscape-outline"></ion-icon>
+            <span>Rectangle</span>
+          </li>
+          <li class="option">
+            <ion-icon name="radio-button-off-outline"></ion-icon>
+            <span>Cercle</span>
+          </li>
+          <li class="option">
+          <ion-icon name="triangle-outline"></ion-icon>
+            <span>Triangle</span>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="file-color">
+            <label for="file-color">Couleurs</label>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <label class="title">Options</label>
+        <ul class="options">
+          <li class="option">
+            <ion-icon name="brush-outline"></ion-icon>
+            <span>Brush</span>
+          </li>
+          <li class="option">
+            <ion-icon name="remove-circle-outline"></ion-icon>
+            <span>Gomme</span>
+          <li class="option">
+            <input type="range" id="size">
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <label class="title">Couleurs</label>
+        <ul class="options">
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+        </ul>
+      </div>
+      <div class="row">
+        <button class="clear-vanvas">Nettoyer</button>
+        <button class="save-image">Enresgistrer l'image</button>
+      </div>
+    </section>
+    <section class="drawing-board">
+
+    </section>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
