@@ -12,7 +12,7 @@
 <body>
 
   <div class="container">
-    <section class="tools-board">
+    <section class="board-tools">
       <div class="row">
         <label class="title">Shapes</label>
         <ul class="options">
@@ -37,7 +37,7 @@
       <div class="row">
         <label class="title">Options</label>
         <ul class="options">
-          <li class="option">
+          <li class="option active">
             <ion-icon name="brush-outline"></ion-icon>
             <span>Brush</span>
           </li>
@@ -49,22 +49,24 @@
           </li>
         </ul>
       </div>
-      <div class="row">
+      <div class="row couleurs">
         <label class="title">Couleurs</label>
         <ul class="options">
           <li class="option"></li>
+          <li class="option selected"></li>
           <li class="option"></li>
           <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
+          <li class="option">
+            <input type="color" id="color-picker" value="#053a69">
+          </li>
         </ul>
       </div>
-      <div class="row">
-        <button class="clear-vanvas">Nettoyer</button>
-        <button class="save-image">Enresgistrer l'image</button>
+      <div class="row btns">
+        <button class="clear">Nettoyer</button>
+        <button class="save">Enregistrer l'image</button>
       </div>
     </section>
-    <section class="drawing-board">
+    <section class="board-draw">
 
     </section>
   </div>

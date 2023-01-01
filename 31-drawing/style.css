@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color1: rgb(45, 30, 30);
+  --color2: #f1f1f1;
+  --color3: #db5005;
+}
+
 body {
   min-height: 100vh;
-  background: linear-gradient(30deg, rgb(219, 255, 182), rgb(7, 125, 64));
+  background:var(--color1);
   font-family: Arial, Helvetica, sans-serif;
   display:flex; 
   justify-content: center; 
@@ -18,4 +24,140 @@ body {
   width: 100%;
   max-width: 1100px;
   display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.container section {
+  background: var(--color2);
+  border-radius: 5px;
+}
+
+.board-draw {
+  flex: 1;
+}
+
+.board-tools {
+  width: 210px;
+  padding: 15px 22px 0;
+}
+
+.board-tools .row {
+margin-bottom: 20px;
+}
+
+.board-tools .row .options {
+  list-style-type: none;
+  margin: 10px 0 0 5px;
+}
+
+.options .option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+.options .option:is(:hover, .active) ion-icon {
+  color: var(--color1);
+}
+.options .option :where(span, label){
+  cursor: pointer;
+  padding: 10px;
+  color: var(--color1);
+}
+
+.options .option:is(:hover, .active) :where(span, label) {
+  color: var(--color3);
+}
+
+.options .option #file-color {
+  height: 14px;
+  width: 14px;
+}
+.options .option #file-color:checked ~ label {
+  color: var(--color3);
+}
+
+.options .options #size {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.couleurs .options {
+  display: flex;
+  justify-content: space-between;
+}
+.couleurs .option {
+  height: 20px;
+  width: 20px;
+  background: red;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+
+.couleurs .option:nth-child(1){
+  background: #f1f1f1;
+  border: 2px solid #333;
+}
+.couleurs .option:nth-child(2){
+  background: #333;
+}
+.couleurs .option:nth-child(3){
+  background: #890000;
+}
+.couleurs .option:nth-child(4){
+  background: #0a6905;
+}
+.couleurs .option:nth-child(5){
+  background: #053a69;
+}
+
+.couleurs .option.selected::before {
+  content: "";
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid var(--color2);
+}
+
+.couleurs .option:first-child.selected::before{
+border-color: var(--color1);
+}
+
+.btns button {
+  width: 100%;
+  color: var(--color2);
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  margin-bottom: 13px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.btns .clear, .btns .save {
+  color: var(--color1);
+  border: 1px solid var(--color1);
+  transition: color 0.2s ease-in-out,
+              background 0.2s ease-in-out;
+}
+
+.btns .clear:hover, .btns .save:hover {
+  background: var(--color1);
+  color: var(--color2);
+}
+
+
+.option #color-picker {
+  opacity: 0;
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 let player = "X";
 
 
-// on gerenotre premier info
+// on gere notre premier info
 const info = document.querySelector(".resultat");
 info.textContent = `Au tour de ${player}`;
 
