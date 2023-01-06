@@ -18,11 +18,11 @@ h1 {
 
 h1::after {
   content: "";
-  position: absolute;
   display: block;
   height: 100%;
   width: 3px;
   background: #ffffff;
+  position: absolute;
   right: -10px;
   top: 0;
   animation: cursor 0.8s infinite;
@@ -35,7 +35,7 @@ h1::after {
     opacity: 1
   }
 
-  0% {
+  50% {
     opacity: 0
   }
 
